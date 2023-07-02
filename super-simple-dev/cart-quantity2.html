@@ -45,14 +45,25 @@
   <script>
     let cartQuantity = 0;
 
-    function updateCartQuantity (change){
+    /*function updateCartQuantity (change){
       if(cartQuantity + change > 10){
         alert('The Cart is Full')
       }else if (cartQuantity + change < 0){
-        alert('Not Enough Items')
+        alert('Not Enough Items in the Cart')
       }else{
         console.log(`Cart quantity: ${cartQuantity += change}`)
       }
+    }*/
+    function updateCartQuantity (change){
+      if (cartQuantity + change > 10){
+        alert('The Cart is Full')
+        return;
+      }
+      if (cartQuantity + change < 0){
+        alert('Not Enough items in the Cart')
+        return;
+      }
+      console.log(`Cart quantity: ${cartQuantity += change}`)
     }
   </script>
 </body>
