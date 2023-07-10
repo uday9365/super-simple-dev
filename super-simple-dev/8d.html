@@ -8,6 +8,7 @@
 <body>
   
   <script>
+    /* 8d :-
     const product1 = {
       name : 'Football',
       price: 1000
@@ -25,7 +26,43 @@
         return product1
       }
     }
-    console.log(comparePrice(product1, product2))
+    console.log(comparePrice(product1, product2))*/
+
+    const peter = {
+      name : 'Spiderman',
+      price: 2000
+    };
+
+    const miles = {
+      name : 'Spiderman',
+      price : 2000
+    };
+
+    const finn = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      const gankey = {
+        name: 'basketball',
+        price: 2095
+      };
+
+    function isSameProduct (product1, product2){
+      if (product1.name === product2.name && product1.price === product2.price){
+        return true;
+      }else{
+        return false;
+      }
+    }
+
+    console.log(isSameProduct(peter, miles));
+    console.log(isSameProduct(peter, finn));
+    console.log(isSameProduct(gankey, finn));
+
+    console.log('GOOd MorNINg'.toLowerCase())
+
+    console.log('hello'.repeat(3))
   </script>
 </body>
 </html>
