@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9g Solution</title>
+</head>
+<body>
+
+  <p>Amazon Shipping Calculator</p>
+  <input type="text" placeholder="Cost of order" class="js-cost-input"
+    onkeydown="onEnter(event)"
+  "/>
+
+  <button onclick="
+    calculateTotal()
+  ">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <script>
+
+    function onEnter(event) {
+      if(event.key === 'Enter'){
+        calculateTotal()
+      }
+    }
+
+      /*
+       * Issue = the calculation is inaccurate.
+       * Fix = calculate the number in cents and then
+       * convert back to dollars at the end.
+      */    
+
+    function calculateTotal() {
+      const inputElement = document.querySelector('.js-cost-input')
+      /*Convert the number in cents by multiplying by 100*/
+      let cost = Number(inputElement.value) * 100;
+      
+      if (cost < 4000){
+        cost += 1000;
+      }
+      
+      //convert back to dollars by dividing by 100
+      document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost / 100}`
+    }
+  </script>
+</body>
+</html>
