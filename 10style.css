@@ -8,6 +8,7 @@ body{
   text-align: center;
 }
 
+/* 10a 10b */
 .amazon-btn{
   padding: 15px 40px;
   background-color: rgb(243, 231, 11);
@@ -39,4 +40,22 @@ body{
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
+}
+
+/* 10d */
+.toggled-btn{
+  background-color: black;
+  color: white;
+  padding: 15px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.is-toggled{
+  background-color: rgb(234, 234, 234);
+  color: black;
 }
