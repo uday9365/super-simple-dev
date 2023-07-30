@@ -22,3 +22,21 @@ function clickBtn(selector) {
     btnElement.classList.remove('is-toggled')
   }  
 }
+
+// 10g
+function turnOnBtn(selector2) {
+  const btnElement = document.querySelector(selector2)
+  if (!btnElement.classList.contains('is-toggled')) {
+    turnOffBtn()
+    btnElement.classList.add('is-toggled')
+  }else{
+    btnElement.classList.remove('is-toggled')
+  }  
+}
+
+function turnOffBtn() {
+  const previousBtn = document.querySelector('.is-toggled')
+  if (previousBtn){
+    previousBtn.classList.remove('is-toggled')
+  }
+}
