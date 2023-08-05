@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./10Calculator.css">
+  <title>Calculator</title>
+</head>
+<body>
+
+  <h2 class="title-logo">Calculator</h2>
+
+  <p class="display-result calculation"></p>
+
+  <p>
+    <button onclick="
+      updateCalculation('1 ')
+      " class="cal-btn gray-btn">1</button>
+
+    <button onclick="
+    updateCalculation('2 ')
+    " class="cal-btn gray-btn">2</button>
+
+    <button onclick="
+    updateCalculation('3 ')
+    " class="cal-btn gray-btn">3</button>
+
+    <button onclick="
+    updateCalculation('+ ')
+    " class="cal-btn orange-btn">+</button>
+  </p>
+
+  <p>
+    <button onclick="
+      updateCalculation('4 ')
+      " class="cal-btn gray-btn">4</button>
+
+    <button onclick="
+    updateCalculation('5 ')
+    " class="cal-btn gray-btn">5</button>
+
+    <button onclick="
+    updateCalculation('6 ')
+    " class="cal-btn gray-btn">6</button>
+
+    <button onclick="
+    updateCalculation('- ')
+    " class="cal-btn orange-btn">-</button>
+  </p>
+
+  <p>
+    <button onclick="
+      updateCalculation('7 ')
+      " class="cal-btn gray-btn">7</button>
+
+    <button onclick="
+    updateCalculation('8 ')
+    " class="cal-btn gray-btn">8</button>
+
+    <button onclick="
+    updateCalculation('9 ')
+    " class="cal-btn gray-btn">9</button>
+
+    <button onclick="
+    updateCalculation('* ')
+    " class="cal-btn orange-btn">*</button>
+  </p>
+
+  </p>
+  <p>
+    <button onclick="
+      updateCalculation('0 ')
+      " class="cal-btn gray-btn">0</button>
+
+    <button onclick="
+      updateCalculation('. ')
+    " class="cal-btn gray-btn">.</button>
+
+    <button onclick="
+    calculation = eval(calculation);
+    displayCal();
+    saveCalculation()
+    " class="cal-btn gray-btn">=</button>
+
+    <button onclick="
+    updateCalculation('/ ')
+    " class="cal-btn orange-btn">/</button>
+  </p>
+  
+  <p>
+  <button onclick="
+    calculation = '';
+    displayCal();
+    saveCalculation();
+  " class="clear-btn gray-btn">Clear</button>  
+  </p>
+
+  <script src="./10Calculator.js"></script>
+</body>
+</html>
