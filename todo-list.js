@@ -1,4 +1,20 @@
-const todoList  = [];
+const todoList  = ["make dinner", "watch Youtube"];
+
+renderTodoList()
+
+function renderTodoList(){
+  let todoListHTML = '';
+
+  for(let i = 0; i < todoList.length; i++){
+    const todo = todoList[i]
+    const html = `<p>${todo}</p>`
+    todoListHTML += html;
+  }
+  console.log(todoListHTML)
+
+  document.querySelector('.js-list-input')
+    .innerHTML = todoListHTML; 
+}
 
 function addTodo() {
   const inputElement = document.querySelector('.js-name-input')
@@ -6,7 +22,5 @@ function addTodo() {
   todoList.push(name)
   console.log(todoList)
   inputElement.value = ''; 
+  renderTodoList()
 }
-
-document.querySelector('.js-list-input')
-  .innerHTML = todoList; 
