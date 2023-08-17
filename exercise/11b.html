@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Last Value</title>
+</head>
+<body>
+  <button onclick="getLastValue()">click</button>
+  <script>
+    const arr = [1, 2, 3, 8, 10, 99, 'bobobobobobo'];
+
+    function getLastValue() {
+      const lastIndex = arr.length - 1;
+      const lastValue = arr[lastIndex]
+      console.log(lastValue)
+    }
+
+    // second approach
+
+    function getLastValue2(array){
+      const lastIndex = array.length - 1;
+      return array[lastIndex]
+    }
+    console.log(getLastValue2([1, 2, 23, 234, 45, "lunga bunga", 0]))
+    console.log(getLastValue2(["hii", "helloo", "yoyo"]))
+  </script>
+</body>
+</html>
