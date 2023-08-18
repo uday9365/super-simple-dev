@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min Max</title>
+</head>
+<body>
+  
+  <script>
+    function minMax(nums){
+      //set the min and max value to be the first value of the array
+      let min = null 
+      let max = null
+
+      for(let i = 0; i < nums.length; i++){
+        const value = nums[i]
+        if(min === null || value < min){
+          min = nums[i]
+        }
+        if(max === null || value > max){
+          max = nums[i]
+        }
+      }
+      return [`min: ${min}, max: ${max}`];
+    }
+    console.log(minMax([3,2,-1,20,0,-9]))
+    console.log(minMax([]))
+    console.log(minMax([10]))
+  </script>
+</body>
+</html>
